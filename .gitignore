@@ -1,0 +1,5 @@
+**/__pycache__
+**/aoc.egg-info
+**/.tox
+**/*.swp
+
