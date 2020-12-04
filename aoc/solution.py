@@ -5,9 +5,13 @@ class Solution:
         if filename:
             self.load_from_file(filename)
 
-    # Implement this method in a subclass to customize the input parsing
-    def parse(line):
+    # implement this hook to customize line parsing
+    def parse(self, line):
         return line
+
+    # hook called after parsing is completed
+    def after_load(self):
+        pass
 
     def part1(self):
         pass
@@ -26,6 +30,7 @@ class Solution:
         for line in i:
             line = line.strip()
             self.data.append(self.parse(line))
+        self.after_load()
         return self
 
     def load_from_string(self, s):
