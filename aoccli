@@ -13,7 +13,6 @@ def main():
     part = sys.argv[2]
     filename = sys.argv[3]
 
-    getattr(getattr(aoc, day), part)
     c = getattr(aoc, day)
     solution = c(filename)
     print(getattr(solution, part)())
