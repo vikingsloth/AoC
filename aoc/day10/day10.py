@@ -45,7 +45,6 @@ class Day10(Solution):
                 one += 1
             else:
                 three += 1
-        print(one, three)
         return one * three
 
     def combinations(self, seq):
