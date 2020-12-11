@@ -51,7 +51,7 @@ class SumWindow:
         return min(self.w) + max(self.w)
 
 
-class Day9(Solution):
+class Day09(Solution):
     def parse(self, line):
         return int(line)
 

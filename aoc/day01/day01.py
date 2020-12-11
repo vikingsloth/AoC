@@ -1,6 +1,6 @@
 from aoc import Solution
 
-class Day1(Solution):
+class Day01(Solution):
 
     def parse(self, line):
         return int(line)

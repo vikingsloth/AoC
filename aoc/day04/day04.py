@@ -91,7 +91,7 @@ class Passport:
 
         
 
-class Day4(Solution):
+class Day04(Solution):
     def after_load(self):
         self.create_passports()
 

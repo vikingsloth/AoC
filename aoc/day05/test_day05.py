@@ -1,5 +1,5 @@
 import pytest
-from .day5 import Day5, Ticket
+from .day05 import Day05, Ticket
 
 INPUT = \
 """FBFBBFFRLR
@@ -9,7 +9,7 @@ BBFFBBFRLL
 """
 
 def test_part1():
-    assert Day5().load_from_string(INPUT).part1() == 820
+    assert Day05().load_from_string(INPUT).part1() == 820
 
 def test_part2():
     assert Ticket("BFFFBBFRRR").get_id() == 567

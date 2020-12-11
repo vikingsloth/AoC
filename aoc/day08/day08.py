@@ -40,7 +40,7 @@ class Computer:
         self.eip += a
 
 
-class Day8(Solution):
+class Day08(Solution):
     def parse(self, line):
         op, arg = line.split(' ')
         return Instruction(op, arg)

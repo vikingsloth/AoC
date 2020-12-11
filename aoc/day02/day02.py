@@ -3,7 +3,7 @@ import re
 import sys
 from aoc import Solution
 
-class Day2(Solution):
+class Day02(Solution):
     re_passwd = re.compile(r"^(\d+)-(\d+) (\w+): (\w+)$")
 
     def parse(self, line):

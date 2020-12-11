@@ -1,5 +1,5 @@
 import pytest
-from .day7 import Day7
+from .day07 import Day07
 
 INPUT1 = \
 """light red bags contain 1 bright white bag, 2 muted yellow bags.
@@ -24,7 +24,7 @@ dark violet bags contain no other bags.
 """
 
 def test_part1():
-    assert Day7().load_from_string(INPUT1).part1() == 4
+    assert Day07().load_from_string(INPUT1).part1() == 4
 
 def test_part2():
-    assert Day7().load_from_string(INPUT2).part2() == 126
+    assert Day07().load_from_string(INPUT2).part2() == 126

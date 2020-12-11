@@ -1,9 +1,9 @@
 from aoc import Solution
 import re
 
-class Day7(Solution):
-    re_bagrule = re.compile("^(.*) bags contain (.*)$")
-    re_subbag = re.compile("(\d+|no) (.*) bags?\.?")
+class Day07(Solution):
+    re_bagrule = re.compile(r"^(.*) bags contain (.*)$")
+    re_subbag = re.compile(r"(\d+|no) (.*) bags?\.?")
 
     def after_load(self):
         self.bags = {}

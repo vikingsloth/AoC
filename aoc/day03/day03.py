@@ -2,7 +2,7 @@
 from aoc import Solution
 import numpy
 
-class Day3(Solution):
+class Day03(Solution):
 
     def parse(self, line):
         return list(line)

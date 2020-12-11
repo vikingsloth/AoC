@@ -38,7 +38,7 @@ class Ticket:
         return self.id
 
 
-class Day5(Solution):
+class Day05(Solution):
 
     def parse(self, line):
         return Ticket(line)

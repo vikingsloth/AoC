@@ -1,6 +1,6 @@
 from aoc import Solution
 
-class Day6(Solution):
+class Day06(Solution):
 
     def part1(self):
         count = 0

@@ -1,5 +1,5 @@
 import pytest
-from .day4 import Day4, Passport
+from .day04 import Day04, Passport
 
 INPUT1 = \
 """ecl:gry pid:860033327 eyr:2020 hcl:#fffffd
@@ -51,11 +51,11 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
 """
 
 def test_part1():
-    assert Day4().load_from_string(INPUT1).part1() == 2
+    assert Day04().load_from_string(INPUT1).part1() == 2
 
 def test_part2():
-    assert Day4().load_from_string(INPUT2).part2() == 0
-    assert Day4().load_from_string(INPUT3).part2() == 4
+    assert Day04().load_from_string(INPUT2).part2() == 0
+    assert Day04().load_from_string(INPUT3).part2() == 4
 
     assert Passport.byr_is_valid('2002') == True
     assert Passport.byr_is_valid('2003') == False
