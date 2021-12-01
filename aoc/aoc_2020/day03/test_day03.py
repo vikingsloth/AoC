@@ -1,5 +1,5 @@
 import pytest
-from aoc import Day03
+from aoc.aoc_2020 import Day03
 
 INPUT = \
 """..##.......

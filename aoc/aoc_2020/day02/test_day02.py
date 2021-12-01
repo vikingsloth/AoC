@@ -1,5 +1,5 @@
 import pytest
-from aoc import Day02
+from aoc.aoc_2020 import Day02
 
 INPUT = \
 """1-3 a: abcde

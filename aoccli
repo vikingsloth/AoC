@@ -1,19 +1,34 @@
 #!/usr/bin/env python3
 
 import sys
+import getopt
+import re
 import aoc
 
 def main():
     if len(sys.argv) < 4:
-        sys.stderr.write("Usage: %s <day> <part> <input filename>\n")
+        sys.stderr.write("Usage: %s <year> <day> <part> <input filename>\n")
         sys.exit(-1)
 
-    day = sys.argv[1]
+    year = sys.argv[1]
+    day = sys.argv[2]
     day = day.capitalize()
-    part = sys.argv[2]
-    filename = sys.argv[3]
+    part = sys.argv[3]
+    filename = sys.argv[4]
 
-    c = getattr(aoc, day)
+    if not re.match("^202[01]$", year):
+        sys.stderr.write("Invalid year\n")
+        sys.exit(-1)
+
+    if not re.match("^Day\d{2}$", day):
+        sys.stderr.write("Invalid day. Format: Day01\n")
+        sys.exit(-1)
+
+    if not re.match("^part[12]$", part):
+        sys.stderr.write("Invalid day. Format: part1\n")
+        sys.exit(-1)
+
+    c = getattr(getattr(aoc, f"aoc_{year}"), day)
     solution = c(filename)
     print(getattr(solution, part)())
     

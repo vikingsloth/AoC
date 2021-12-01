@@ -1,5 +1,5 @@
 import pytest
-from aoc import Day01
+from aoc.aoc_2020 import Day01
 
 INPUT = \
 """1721
