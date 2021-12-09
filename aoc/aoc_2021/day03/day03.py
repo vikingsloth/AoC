@@ -1,7 +1,22 @@
 from aoc import Solution
 
+# TODO rework this solution
+
 class Day03(Solution):
 
+    def common_uncommon(self, data, pos):
+        ones = []
+        zeros = []
+        for bn in data:
+            if bn[pos] == "1":
+                ones.append(bn)
+            else:
+                zeros.append(bn)
+        if len(ones) > len(zeros):
+            return (ones, zeros)
+        else:
+            return (zeros, ones)
+        
     def part1(self):
         ones = [0] * len(self.data[0])
         for bn in self.data:
@@ -25,17 +40,11 @@ class Day03(Solution):
     def part2(self):
         oxy = list(self.data)
         print(oxy)
+        data = self.data
         for i in range(len(oxy[0])):
-            ones = []
-            zeros = []
-            print(oxy)
-            for a in range(len(oxy)):
-                print(a, i)
-                print("oxy", oxy[a])
-                if oxy[a][i] == "1":
-                    ones.append(oxy[a])
-                else:
-                    zeros.append(oxy[a])
+            common, uncommon = self.common_uncommon(data, i)
+            
+
             if len(ones) >= len(oxy) / 2:
                 oxy = ones
             else:
